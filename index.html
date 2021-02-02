@@ -6,41 +6,42 @@
 		<title>:)</title>
 		<style type="text/css">
 			* {margin: 0;padding: 0;}
-			body {background: url(grey.png) 100%;font-family: helvetica;font-size: 1.2rem;/*display: flex;*/padding: 20px;box-sizing: border-box;}
+			body {background: url(grey.png) 100%;font-family: helvetica;font-size: 1.2rem;display: flex;}
 			a {color: #5b7f90;padding-bottom: 1px;}
 			a:hover {color: #6fa3bb;}
 			i.fa {font-size: 16px;contain: content;border-right: 1px solid #000000;padding-right: 10px;margin-right: 5px;}
 			
 			
-			/*nav {
+			nav {
 				display: grid;
-				justify-content: center;
 				align-items: center;
-				margin-left: 20px;
-				width: 20vw;
+				width: 300px;
+				height: 100vh;
+				background: url(bj.jpg);
+				background-size: contain;
+				z-index: 1;
 			}
 			nav div {
 				display: grid;
 				text-align: end;
 			}
 			nav a {
+				color: #8bc34a;
 				font-size: 1.7rem;
 				text-decoration: none;
-				padding: 10px;
+				padding: 10px 20px;
 				transition: .2s;
 			}
 			nav a:hover {
 				color: #fff;
 				background: #7cb342;
-				border-right: 4px solid #558b2f;
-			}*/
+				border-right: 5px solid #558b2f;
+			}
+			#button-nav {display: none;}
 			
 			
 			#card {
-				display:flex;
-				justify-content: center;
-				align-items: center;	 /*垂直居中*/
-				min-height: 100vh;
+				margin: 15% 20px;
 			}
 			
 			#info {
@@ -54,7 +55,7 @@
 			
 			#about {
 				margin-top: 20px;
-				margin-left: 75px;
+				margin-left: 90px;
 				line-height: 1.75rem;
 				max-width: 40vw;
 			}
@@ -62,20 +63,33 @@
 			
 			
 			@media screen and (max-width:555px) {
-				nav {display: none;}
+				body {display: block;}
+				nav {
+					position: fixed;
+					top: 0;
+					left: -300px;
+				}
+				#button-nav {
+					display: block;
+					width: max-content;
+					padding: 0 5px;
+					position: fixed;
+					top: 0;
+				}
 				#about {max-width: 100%;}
 			}
 		</style>
 		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
 	</head>
 	<body>
-		<!--<nav>
+		<span id="button-nav" onclick="document.getElementById('nav').style.left = '0px';">+</span>
+		<nav id="nav" onclick="document.getElementById('nav').style.left = '-300px';">
 			<div>
-				<a href="http://blog.longjie233.top">博客</a>
+				<a href="blog.longjie233.top">博客</a>
 				<a href="https://github.com/dragonjie233">GitHub</a>
 			</div>
-		</nav>-->
-		<div id="card">
+		</nav>
+		<div id="card" onclick="document.getElementById('nav').style.left = '-300px';">
 			<div id="main">
 				<div id="info">
 					<img src="https://gravatar.loli.net/avatar/2d28483c8759f5881628678444901d48?d=mp&v=1.3.10" title="[ L ]: hello world" style="border-radius: 5px;margin-right: 10px;"/>
@@ -88,7 +102,7 @@
 				
 				<div id="about">
 					<p>一个向着全栈工程师发展的初中生.</p>
-					<p>我接触编程开始于2018年08月28日和<i>JAVA</i>，当我初中第一个学期中遇到一个人后，愈加喜欢、热爱编程了。</p>
+					<p>我接触编程开始于2018年08月28日和<i>JAVA</i>（只学了点就改学了），当我初中第一个学期中遇到一个人后，愈加喜欢、沉迷编程了。</p>
 				</div>
 			</div>
 		</div>
