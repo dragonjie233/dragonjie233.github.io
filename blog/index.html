@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+		<header id="header">
+			<img src="https://gravatar.loli.net/avatar/2d28483c8759f5881628678444901d48?d=mp&v=1.3.10" class="avatar">
+			<div class="info">
+				<p class="info-name">龙介LongJie</p>
+				<p>一个向着全栈工程师发展的初中生. 我的主页 > <a href="http://longjie233.top">longjie233.top</a></p>
+			</div>
+		</header>
+		
+
+		<div class="main">
+			<table id="tableSort">
+				<thead>
+					<tr><th width="15%" data-type="date" align="right">时间 <font size="2" color="#9e9e9e">⇅</font></th><th align="left">文章</th></tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><time>2021-4-3</time></td>
+						<td>
+							<h3 class="title"><a href="#post1">hello, worl</a></h3>
+							<div id="post1" class="window">
+								<div class="window-content">
+									<div class="head">
+										<h3 class="window-title">hello, worl</h3>
+										<time>2021-4-3</time>
+										<a href="#">close</a>
+									</div>
+									<div class="content">
+										<p>奇怪的网页，这可以说是个博客，但它却连个后台都没有，完全靠手动去增加内容。</p>
+										<p>这个新手<del>程序员</del>也太low了吧，连个后端都不会写。其实我还没学会了，我还是个初中学生党，没辣么多的时间去学(懒)，而且没钱买服务器和虚拟主机去搭建网站。</p>
+										<p>关于博客我已经写过N多个了，结果因为"三分钟"热度，没一个可以一直保持着，这也导致了之前的文章数据丢失了，这是真的好烦啊~</p>
+									</div>
+								</div>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<script type="text/javascript">
+			var tbody = document.querySelector('#tableSort').tBodies[0];
+			var th = document.querySelector('#tableSort').tHead.rows[0].cells;
+			var td = tbody.rows;
+			for (var i = 0;i < th.length;i++){
+			  th[i].flag = 1;
+			  th[i].onclick = function(){
+				sort(this.getAttribute('data-type'),this.flag,this.cellIndex);
+				this.flag = -this.flag;
+			  };
+			};
+			function sort(str,flag,n){
+			  var arr = []; //存放DOM
+			  for (var i = 0;i < td.length;i++){
+				arr.push(td[i]);
+			  };
+			  //排序
+			  arr.sort(function(a,b){
+				return method(str,a.cells[n].innerHTML,b.cells[n].innerHTML) * flag;
+			  });
+			  //添加
+			  for (var i = 0;i < arr.length;i++){
+				tbody.appendChild(arr[i]);
+			  };
+			};
+			//排序方法
+			function method(str,a,b){
+			  switch (str){
+			  case 'num': //数字排序
+				return a-b;
+				break;
+			  case 'string': //字符串排序
+				return a.localeCompare(b);
+				break;
+			  default:  //日期排序，IE8下'2012-12-12'这种格式无法设置时间，替换成'/'
+				return new Date(a.split('-').join('/')).getTime()-new Date(b.split('-').join('/')).getTime();
+			  };
+			};
+		</script>
+	</body>
+</html>
