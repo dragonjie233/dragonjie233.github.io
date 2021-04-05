@@ -1,0 +1,316 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+*::-webkit-scrollbar {
+	width: 5px;
+	background: none;
+}
+*::-webkit-scrollbar-thumb {
+	background: #353B48;
+}
+body {
+	color: #353b48;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+
+
+/**
+ * 顶部部分
+ */
+header {
+	display: flex;
+	align-items: flex-end;
+	color: #fff;
+	background: #353b48;
+	padding: 20px 10px;
+}
+header .avatar {
+	margin-right: 10px;
+	border: 2px solid #757c8c;
+}
+header .info-name {
+	font-size: 1.5rem;
+	margin-bottom: 5px;
+}
+
+
+
+/**
+ * 主体部分
+ */
+@font-face {
+	font-family: font1;
+	src: url("Bignoodletitling-Oblique-2.ttf");
+}
+.main table {
+	border-collapse: collapse;
+	width: 100%;
+	transition: all .3s ease;
+}
+.main table th {
+	padding: 12px;
+}
+.main table th,.main table td {
+	border-bottom: 1px solid #dedede;
+	word-break: break-all;
+}
+.main table thead {
+	border-bottom: 2px solid #dedede;
+	white-space: nowrap;
+}
+.main table tr td:first-child {
+	padding: 15px;
+	text-align: end;
+	white-space: nowrap;
+	background: #f7f7f7;
+	border-right: 1px solid #dedede;
+	color: #777;
+}
+.main table tr td:first-child,.title,.window-title,.window-content .head time{
+	font-family: 'font1';
+	font-weight: 100;
+	font-size: 1.5rem;
+	letter-spacing: 0.1rem;
+}
+.main table tr td:first-child p {
+	margin: 0;
+	margin-top: 10px;
+}
+.main table td a {
+	text-decoration: none;
+	color: #2f3640;
+	display: block;
+	padding: 15px;
+	outline: none;
+}
+
+
+/**
+ * 文章样式
+ */
+hr {
+	border-style: none;
+	border: 2px dashed #ccc;
+	transform: skewX(55deg);
+	margin: 50px;
+}
+blockquote {
+	background: #cfd8dc;
+	border-left: 4px solid #607d8b;
+	padding: 5px 10px;
+	margin: 10px 0;
+	color: #607d8b;
+	font-style: oblique;
+}
+blockquote p {
+	margin: 0!important;
+}
+code {
+	color: #ddd;
+	background: #5a5a5a;
+	padding: 3px 5px;
+	border-radius: 2px;
+	border: 1px solid #505050;
+}
+pre {
+	background: #5a5a5a;
+	padding: 15px;
+	border-radius: 5px;
+	overflow: auto;
+}
+pre code {
+	background: none;
+	border: none;
+}
+.content {
+	letter-spacing: 0.1rem;
+	line-height: 2rem;
+	padding-left: 10vw;
+	word-break: break-word;
+}
+@media (max-width:500px) {.content {padding-left: 0;}}
+.content p {
+	margin: 10px;
+}
+header a {
+	color: #fbc531;
+	text-decoration: none;
+}
+.content ul,.content ol,.content ul,.content ol {
+	padding-left: 45px;
+	margin: 15px 0;
+}
+.content ul p,.content ol p,.content ul p,.content ol p {
+	margin: 0!important;
+}
+.content p {
+	margin: 25px 10px;
+}
+.content h1,.content h2,
+.content h3,.content h4,
+.content h5,.content h6 {
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+.content h1::before,.content h2::before,
+.content h3::before,.content h4::before,
+.content h5::before,.content h6::before {
+	content: "#";
+	color: #4989bf;
+	margin-right: 5px;
+}
+.content img {
+	width: max-content;
+	max-width: 90%;
+	box-shadow: 0 0 5px #555;
+	padding: 5px;
+	border-radius: 3px;
+}
+.content a {
+	color: #ca3328!important;
+	padding: 0!important;
+	display: inline-block!important;
+	word-break: break-word!important;
+}
+.content a:hover {
+	color: #942921!important;
+}
+
+
+
+
+
+/**
+ * 重写评论样式
+ */
+/*
+.comment .vheader input,.comment button,.comment textarea {
+	color: #bbb!important;
+}
+.v[data-class=v] .vwrap {
+	border-style: none!important;
+}
+.v[data-class=v] .veditor {
+	min-height: 4em;
+	background: #353B48!important;
+	color: #bbb!important;
+	padding: 10px!important;
+	border-radius: 0;
+}
+.v[data-class=v] .vrow .vcol.vcol-30 {
+	display: none;
+}
+.v[data-class=v] .vrow .vcol.vcol-70 {
+	width: 100%!important;
+	color: #bbb!important;
+	background: #2e333e;
+}
+.v[data-class=v] .vbtn {
+	border-style: none!important;
+	border-radius: 0!important;
+	width: 100%;
+	outline: none;
+	background: none!important;
+}
+.v[data-class=v] .vcards .vcard .vhead .vsys {
+	display: none;
+}
+.v[data-class=v] .txt-right {
+	display: none;
+}
+.v[data-class=v] .vcards .vcard .vimg {
+	border-radius: 2px!important;
+	box-shadow: 0 0 5px 1px #666;
+	padding: 1px!important;
+}
+.v[data-class=v] .vwrap .vheader {
+	background: #2E333E;
+}
+.v[data-class=v] .vwrap .vheader .vinput {
+	width: 50%!important;
+	border-bottom: none!important;
+	border-radius: 0;
+}
+.v[data-class=v] .vwrap .vheader .vmail {
+	display: none;
+}
+.v[data-class=v] .vrow {
+	padding: 0!important;
+}
+.v[data-class=v] .vwrap .vedit {
+	display: grid;
+	padding-top: 0!important;
+}
+.v[data-class=v] .vrow .vcol.vctrl {
+	display: none;
+}
+.v[data-class=v] .vcards {
+	padding: 0 15px!important;
+}
+.v[data-class=v] .vcards .vcard .vcontent p {
+	color: #555!important;
+}
+.v[data-class=v] .vwrap {
+	border-radius: 0!important;
+	padding: 0!important;
+}
+*/
+
+
+/**
+ * 组件
+ */
+.window {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	/* background: rgba(0,0,0,0.5); */
+	display: grid;
+	align-items: end;
+	visibility: hidden;
+	transform: translateY(100vh);
+	pointer-events: none;
+	transition: .5s;
+}
+.window:target {
+	visibility: visible;
+	transform: translateY(0vh);
+	pointer-events: auto;
+}
+.window .head {
+	display: flex;
+	border-bottom: 1px solid #dcdde1;
+	padding-bottom: 10px;
+	margin-bottom: 35px;
+	align-items: center;
+	position: relative;
+}
+.window .head .window-title {
+	flex: 1;
+}
+.window .head time {
+	position: absolute;
+	bottom: -13px;
+	left: 10px;
+	color: #ddd;
+	font-size: 20px;
+	background: #fff;
+	padding: 0 5px;
+}
+.window .window-content {
+	width: 100vw;
+	height: 100vh;
+	background: #fff;
+	padding: 10px;
+	overflow: auto;
+	box-sizing: border-box;
+}
+.window .window-content a {
+	padding: 0;
+	color: #353b48;
+	border-bottom: none;
+	word-break: keep-all;
+}
