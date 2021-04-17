@@ -89,5 +89,21 @@
 				<iframe src="https://www6.cbox.ws/box/?boxid=828099&boxtag=JuoDKO" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
 			</div>
 		</div>
+		
+		
+		<script type="text/javascript">
+			document.onkeydown=function(event){
+				var e = event || window.event || arguments.callee.caller.arguments[0];
+				if(e && e.keyCode==76){
+					var prompt0 = prompt("------------\n[ L ]: Hello,friend!\n------------\n\n回答:\n[ 1 ]:Hello\n[ 0 ]:Exit");
+					if(prompt0 == 1) {
+						var prompt1 = prompt("------------\n[ L ]: 欢迎您到访我的网页。\n------------\n\n回答:\n[ 1 ]:嗯哼~\n[ 0 ]:Exit");
+						if(prompt1 == 1) {
+							alert('我的脑子实在是想不出台词了。\n这个js靠if套娃的，而且互动单一。');
+						}
+					}
+				};
+			}; 
+		</script>
 	</body>
 </html>
