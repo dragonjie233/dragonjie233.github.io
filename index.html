@@ -3,218 +3,91 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 毫无用处的meta信息 -->
+		<meta name="author" content="龙介longjie"/>
+		<meta name="date" content="2021/4/16 21:30:07"/>
+		<!-- ---- -->
 		<title>hello, world</title>
-		<link rel="icon" type="image/x-icon" href="favicon.ico">
-		<style type="text/css">
-			/* 不要问我为什么把CSS放这，问就是不想创建新文件QvQ */
-			
-			* {margin: 0;padding: 0;}
-			body {background: url(grey.png);font-family: "Lucida Console", Monaco, monospace, helvetica;color: #353b48;}
-			a {color: #5b7f90;text-decoration: none;}
-			a:hover {color: #6fa3bb;}
-			ul {padding-left: 30px;}
-			ul li {margin: 5px 0;}
-			code {
-				padding: 5px;
-				font-size: 1.1rem;
-				border: 1px solid #dcdde1;
-				background: rgb(245,246,250,0.5);
-				border-radius: 2px;
-			}
-			
-			#card {
-				margin: 20px;
-				line-height: 2rem;
-				word-break: break-word;
-				display: grid;
-				justify-content: center;
-			}
-			#info {
-				width: max-content;
-				color: #33691e;
-				border-radius: 2px;
-				background: rgba(139,195,74,0.30);
-				border: 2px solid rgba(139,195,74,0.30);
-				line-height: initial;
-				margin: 10px auto;
-			}
-			#info span {
-				padding: 4px 9px;
-				display: inline-block;
-			}
-			
-			
-			#main {
-				border-top: 2px solid rgba(0,0,0,0.1);
-			}
-			#main h2 {
-				margin-bottom: 20px;
-			}
-			
-			
-			#skill,#works,#box {
-				padding: 20px;
-			}
-			#skill-content {
-				display: flex;
-				flex-wrap: wrap;
-			}
-			#skill p {
-				width: 45%;
-				margin-top: 10px;
-				margin-left: 10px;
-				padding-right: 5px;
-				display: flex;
-				align-items: center;
-				border: 1px dashed rgba(0,0,0,0);
-			}
-			#skill p span {
-				padding: 5px;
-				margin-right: 5px;
-				display: inline-block;
-				background: rgba(72,126,176,0.35);
-			}
-			#skill p:hover {
-				border-color: rgba(72,126,176,0.5);
-			}
-			
-			
-			#works {
-				flex: 1;
-			}
-			#works a {
-				color: #555;
-				padding: 20px;
-				border-radius: 2px;
-				width: max-content;
-				word-break: break-word;
-				display: inline-block;
-				border: 1px solid rgba(0,0,0,0);
-			}
-			#works a:hover {
-				border: 1px solid rgba(0,0,0,0.20);
-				background: rgba(0,0,0,0.02);
-			}
-			#works a h3 {
-				margin-bottom: 5px;
-			}
-
-
-			nav {overflow: auto;}
-			nav a {
-				display: inline-block;
-				padding: 10px 15px;
-			}
-			.window-model {position:fixed;top:0;bottom:0;left:0;right:0;z-index:520;background-color:rgba(0,0,0,0.3);visibility:hidden;opacity:0;pointer-events:none;transition:.5s;display:flex;justify-content:center;align-items:center}
-			.window-model:target {visibility:visible;opacity:1;pointer-events:auto}
-			.window-model > div {width:50%;height:max-content;background:#f5f6fa;padding:10px;border-radius:3px}
-			.window-model #close-model {text-align:end;border-bottom:1px solid #dcdde1;padding-bottom:10px;margin-bottom:10px}
-			.window-model #close-model a {padding:0}
-			
-			
-			@media screen and (max-width:600px) {
-				#skill-content {display: grid;}
-				#skill p {width: 100%;}
-				#works a {width: auto;}
-				.window-model > div {width: 80%;}
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_2493528_65b4srm61cq.css"/>
 	</head>
 	<body>
-		<nav>
-			<a href="#abc" id="btn-model">[ 博客 ]</a>
-			<div id="abc" class="window-model">
-				<div>
-					<p id="close-model"><a href="#">[ x ]</a></p>
-					<p><del>博客被我埋藏到一个隐蔽的地方，但它确实存在这个互联网宇宙中.</del> 经确认，它已失连</p>
+		<header>
+		</header>
+		<div class="main">
+
+			<div class="info">
+				<h2>
+					<img src="https://gravatar.loli.net/avatar/2d28483c8759f5881628678444901d48?d=mp&v=1.3.10" width="35px" height="35px" style="margin-right: 10px;border: 2px solid #888;">
+					龙介LongJie
+				</h2>
+				<div class="link">
+					<span style="color: #ddd;text-align: center;font-size: small;margin-bottom: 5px;"><i>How to contact me?</i></span>
+					<a href="https://qm.qq.com/cgi-bin/qm/qr?k=beeNRxiEPejV6jR5Tknn73jk6HrhQZzd&noverify=0"><i class="iconfont icon-qq"></i><span><b>QQ</b><br>2976319910</span></a>
+					<a href="mailto:longjie.qwq@qq.com"><i class="iconfont icon-email"></i><span><b>E-Mail</b><br>longjie.qwq@qq.com</span></a>
+					<a href="https://github.com/dragonjie233"><i class="iconfont icon-github"></i><span><b>GitHub</b><br>dragonjie233</span></a>
+					<a href="https://space.bilibili.com/133389837"><i class="iconfont icon-bilibili-line"></i><span><b>BiliBili</b><br>Name_龙介</span></a>
 				</div>
 			</div>
-			<a href="#abc1">[ 技术 ]</a>
-			<div id="abc1" class="window-model">
-				<div>
-					<p id="close-model"><a href="#">[ x ]</a></p>
-					<p>经确认，它已失连</p>
+
+			<div class="content">
+				<div class="box">
+					<h2><span>About Me<br><i>关于我</i></span></h2>
+					<p>一位正在努力成为全栈工程师的学生党。</p>
+					<p>我的编程生涯始于18年JAVA，当我在初中遇到一个人后，更加奠定了我对计算机的热爱。</p>
+				</div>
+				<div class="box skill">
+					<h2><span>Skill<br><i>技能</i></span></h2>
+					<table width="100%">
+						<tr>
+							<td>html</td>
+							<td><div class="progressBar"><div class="skills html"></div></div></td>
+						</tr>
+						<tr>
+							<td>css</td>
+							<td><div class="progressBar"><div class="skills css"></div></div></td>
+						</tr>
+						<tr>
+							<td>js</td>
+							<td><div class="progressBar"><div class="skills js"></div></div></td>
+						</tr>
+						<tr>
+							<td>c</td>
+							<td><div class="progressBar"><div class="skills c"></div></div></td>
+						</tr>
+						<tr>
+							<td>python</td>
+							<td><div class="progressBar"><div class="skills python"></div></div></td>
+						</tr>
+						<tr>
+							<td>业余摄影</td>
+							<td><div class="progressBar"><div class="skills takePhoto"></div></div></td>
+						</tr>
+					</table>
+				</div>
+				<div class="box works">
+					<h2><span>Works<br><i>作品</i></span></h2>
+					<div class="works-box">
+						<a href="#photoWorks" id="btn-windows" class="n1">
+							<img src="20210402-DSC01462.jpg">
+							<span>摄影作品</span>
+						</a>
+						<div id="photoWorks" class="windows">
+							<div class="windows-body">
+								<div class="windows-head"><h3>摄影作品</h3><a href="#">close</a></div>
+								<img src="20210402-DSC01462.jpg">
+								<p style="text-align: end;">21-04-02 <b>[时间]</b><br>Sony Nex-5T <b>[设备]</b><br>16~50mm (套头) <b>[镜头]</b></p>
+								<br>
+								<p>这是32G的图库中，让我最喜欢的一张。</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<p style="float: right;padding: 10px 15px;"><strong>距离中考还有 <span id="learn"style="color: #e84118;"></span> 天</strong></p>
-		</nav>
-		<div id="card">
-			<img src="https://gravatar.loli.net/avatar/2d28483c8759f5881628678444901d48?d=mp&v=1.3.10" title="[ L ]: hello world" style="border-radius: 5px;margin-right: 10px;margin: 10px auto;"/>
-			<div id="info">
-				<span id="name"><strong>龙介LongJie</strong></span>
-				<span id="birthday">5/16</span>
-				<span id="link">Email@<a href="mailto:longjie.qwq@qq.com">longjie.qwq</a></span>
+			
+			<div class="comment">
+				<iframe src="https://www6.cbox.ws/box/?boxid=828099&boxtag=JuoDKO" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>
 			</div>
-				
-			<p style="text-align: center;">一个向着<strong>全栈</strong>工程师发展的初中生.</p>
-			<p>我接触编程开始于2018年08月28日和<i>JAVA</i>（只学了点就改学了），当我初中第一个学期中遇到一个人后，愈加喜欢、沉迷编程了。</p>
-			<br/>
-			<p>我的程序猿生涯已过 <span id="career"></span> 天 / 网站已运行 <span id="website"></span> 天</p>			
-			<br/>
-			<p>关于我的爱好</p>
-			<ul style="list-style: none;">
-				<li><code>动漫</code> 老二次猿了 OvO</li>
-				<li><code>摄影</code> 业余爱好，只要有感觉就会拿起相机拍</li>
-				<li><code>电影</code> 如果好看，就会一直看下去，我很挑剔的 (饮食也是)</li>
-				<li><code>音乐</code> 心情不好、旅游、无聊、写代码时听，啥音乐都听</li>
-				<li><code>游戏</code> 平时超无聊才会玩一下，或者Friends叫我玩</li>
-			</ul>
 		</div>
-		
-		<div id="main">
-			<div id="skill">
-				<h2>技能</h2>
-				<div id="skill-content">
-					<p id="html"><span style="width: 60%;">Html</span> 60%</p>
-					<p id="css"><span style="width: 35%;">CSS</span> 35%</p>
-					<p id="js"><span style="width: 5%;">JS</span> 5%</p>
-					<p id="python"><span style="width: 1%;">Python</span> 1%</p>
-					<p id="c"><span style="width: 0.1%;">C</span>0.1%</p>
-					<p id="photography"><span style="width: 13%;">业余摄影</span> 13%</p>
-				</div>
-			</div>
-			<div id="works">
-				<h2>作品</h2>
-				<a href="https://gitee.com/longjie233/losablog" target="_blank">
-					<h3>LoSa Blog</h3>
-					<p>一个简单，支持markdown语法的静态博客生成工具</p>
-				</a>
-			</div>
-		</div>
-		
-		<script type="text/javascript">
-			function DateDiff(start, end){
-				start = new Date(start);	
-				end = new Date();
-				if(end > start){
-					days = parseInt(Math.abs(end - start) / 1000 / 60 / 60 / 24);
-				}else{
-					days = '0';
-				}	
-				return days;
-			}
-			document.getElementById('career').innerText = DateDiff('2018-08-28');
-			document.getElementById('website').innerText = DateDiff('2021-01-17');
-			
-			
-			function DateDiff2(end){
-				today = new Date();	
-				end = new Date(end);
-				if(end > today){
-					days = parseInt(Math.abs(end - today) / 1000 / 60 / 60 / 24);
-				}else{
-					days = '0';
-				}	
-				return days;
-			}
-			document.getElementById('learn').innerText = DateDiff2('2021-06-26');
-			
-			document.onkeydown=function(event){
-				var e = event || window.event || arguments.callee.caller.arguments[0];
-				if(e && e.keyCode==76){
-					alert('[L]: hello, worldl')
-				};
-			}; 
-		</script>
 	</body>
 </html>
