@@ -17,9 +17,16 @@ body {
 	padding: 5%;
 }
 a {
-	color: #607d8b;
+	color: #bb6a6a;
 	text-decoration: none;
+	transition: color 0.3s ease;
 }
+a:hover {
+	color: #de7a7a;
+	font-weight: bold;
+}
+
+
 /**
  * 组件
  */
