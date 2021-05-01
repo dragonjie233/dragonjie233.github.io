@@ -28,56 +28,6 @@ a:hover {
 
 
 /**
- * 组件
- */
-.windows {
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0,0,0,0.3);
-	display: grid;
-	justify-content: center;
-	align-items: center;
-	
-	visibility: hidden;
-	opacity: 0;
-	pointer-events: none;
-	transition: .5s;
-}
-.windows:target {
-	visibility: visible;
-	opacity: 1;
-	pointer-events: auto;
-}
-.windows .windows-head {
-	border-bottom: 1px solid #777;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	display: flex;
-}
-.windows .windows-head h3 {
-	flex: 1;
-}
-.windows .windows-head a {
-	color: #ffc107;
-	padding: 0;
-	margin: 0;
-	transform: none!important;border: none!important;
-}
-.windows .windows-body {
-	max-width: 70vw;
-	max-height: 90vh;
-	background: #555;
-	padding: 10px;
-	overflow: auto;
-	border-top: 5px solid #555;
-	border-bottom: 5px solid #555;
-}
-
-
-/**
  * Somebody
  */
 .html {width: 60%;}
@@ -233,32 +183,17 @@ a:hover {
 /**
  * Works
  */
-.works-box {
-	display: grid;
-	grid-template-columns: 50% 50%;
-}
 .works-box a {
 	display: inline-block;
 	text-decoration: none;
-	padding: 5px;
+	padding: 5px 10px;
 	color: #fff;
 	background: #555;
 	margin: 10px;
-	border-bottom: 5px solid #555;
+	border-left: 5px solid #555;
 	transition: .3s;
 }
 .works-box a:hover {
-	transform: translateY(-5px);
-	border-bottom: 5px solid #888;
-}
-.works-box a p {
-	text-indent: 0;
-}
-.works-box a h3 {
-	color: #8bc34a;
-	margin-bottom: 5px;
-	text-align: center;
-}
-.n1 {
-	text-align: center;
+	transform: translateX(5px);
+	border-left: 5px solid #888;
 }
