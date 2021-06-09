@@ -113,6 +113,12 @@ a:hover {
 .content p {
 	text-indent: 4ch;
 }
+.content b,.content strong {
+	color: #eee;
+}
+.content i {
+	color: #777;
+}
 .content img {
 	width: 100%;
 }
