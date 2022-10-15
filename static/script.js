@@ -41,7 +41,7 @@ var btn_read = document.querySelectorAll('.list a');
 
 for(var i =0;i<btn_read.length;i++){
     btn_read[i].onclick = function(){
-        let url = this.getAttribute('href').replace(/[^0-9]/ig,"");
+        let url = this.getAttribute('href')..split('.')[1].split('/')[2];
 
         window.location.href = '?p=' + url;
 
