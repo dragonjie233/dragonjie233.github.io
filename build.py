@@ -6,7 +6,7 @@ fileurl  = filepath + '/'
 List = []
 
 files = os.listdir(filepath)
-files.sort(key= lambda x:int(x[:-3]))
+files.sort(key= lambda x:int(x[:8]))
 
 for file in files:
     fileDate = file.replace('.md', '')
