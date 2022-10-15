@@ -27,6 +27,7 @@ function loadMD(file) {
             loadDiv.innerHTML = marked(xmlhttp.responseText);
             document.body.style.background = '#FFF';
             loadDiv.setAttribute('class', '');
+            hljs.highlightAll();
         } else if (xmlhttp.status == 404) {
             loadDiv.innerHTML = '<h1>未找到该文章</h1><a href="./">返回首页</a>'
         }

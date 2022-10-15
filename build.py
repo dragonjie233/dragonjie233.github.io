@@ -45,7 +45,6 @@ html2 = '''        </div>
     <script src="https://cdn.staticfile.org/marked/2.1.3/marked.min.js"></script>
     <script src="https://cdn.staticfile.org/highlight.js/11.6.0/highlight.min.js"></script>
     <script src="static/script.js"></script>
-    <script>hljs.highlightAll();</script>
 </body>
 </html>'''
 
